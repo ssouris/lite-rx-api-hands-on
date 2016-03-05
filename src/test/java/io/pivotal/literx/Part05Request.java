@@ -44,19 +44,19 @@ public class Part05Request {
 				.assertValueCount(0);
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.SKYLER)
+				.awaitAndAssertNextValues(User.SKYLER)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.JESSE)
+				.awaitAndAssertNextValues(User.JESSE)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.WALTER)
+				.awaitAndAssertNextValues(User.WALTER)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.SAUL)
+				.awaitAndAssertNextValues(User.SAUL)
 				.assertComplete();
 	}
 
@@ -76,23 +76,23 @@ public class Part05Request {
 				.assertValueCount(0);
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.SKYLER)
+				.awaitAndAssertNextValues(User.SKYLER)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.JESSE)
+				.awaitAndAssertNextValues(User.JESSE)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.WALTER)
+				.awaitAndAssertNextValues(User.WALTER)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.SAUL)
+				.awaitAndAssertNextValues(User.SAUL)
 				.assertComplete();
 	}
 
-	// TODO Return a Flux with skyler, jesse, walter and saul that prints automatically logs for all Reactive Streams signals
+	// TODO Return a Flux with all users stored in the repository that prints automatically logs for all Reactive Streams signals
 	Flux<User> fluxWithLog() {
 		return null;
 	}
@@ -109,23 +109,23 @@ public class Part05Request {
 				.assertValueCount(0);
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.SKYLER)
+				.awaitAndAssertNextValues(User.SKYLER)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.JESSE)
+				.awaitAndAssertNextValues(User.JESSE)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.WALTER)
+				.awaitAndAssertNextValues(User.WALTER)
 				.assertNotTerminated();
 		requestOne(testSubscriber);
 		testSubscriber
-				.awaitAndAssertValues(User.SAUL)
+				.awaitAndAssertNextValues(User.SAUL)
 				.assertComplete();
 	}
 
-	// TODO Return a Flux with skyler, jesse, walter and saul that prints "Starring:" on subscribe, "firstname lastname" for all values and "The end!" on complete
+	// TODO Return a Flux with all users stored in the repository that prints "Starring:" on subscribe, "firstname lastname" for all values and "The end!" on complete
 	Flux<User> fluxWithDoOnPrintln() {
 		return null;
 	}
